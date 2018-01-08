@@ -21,7 +21,7 @@ sh = nan(100, 100);
 tic
 for n = 1:100
     for m = n:100
-        [~,~,sh(n,m)] = leadlag(Close,n,m,annualScaling);
+        [~,~,sh(n,m)] = leadlag(Close,n,m,annualScaling,0);
     end
 end
 toc
