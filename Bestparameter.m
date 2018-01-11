@@ -1,7 +1,7 @@
 %% Best parameter for lead and lag
 %
 annualScaling= sqrt(250);      %250 being the annual number of trade day
-leadlag(Close,1,20,annualScaling);
+leadlag(P,1,20,annualScaling);
 
 sh= nan(100,100);
 tic
@@ -21,4 +21,4 @@ colorbar
 %%  Plotting for the best sharpe ratio
 [maxSH, row] = max (sh);
 [maxSH, col] = max(maxSH);
-leadlag(Close, row(col), col, annualScaling);
+leadlag(P, row(col), col, annualScaling);
